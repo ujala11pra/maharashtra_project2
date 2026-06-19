@@ -4,8 +4,8 @@ font-family: Arial;
 scroll-behavior: smooth;
 }
 
-/* NAVBAR */
-nav {
+/*NAVBAR*/
+/*nav {
 display: flex;
 justify-content: space-between;
 background: black;
@@ -25,6 +25,48 @@ margin: 10px;
 nav a {
 color: white;
 text-decoration: none;
+}*/
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
 }
 
 /* SECTIONS */
@@ -58,6 +100,7 @@ background: #f2f2f2da;
 
 #booking {
     background: linear-gradient(to right, #d4fc79, #96e6a1);
+    /* background: linear-gradient(to right, #667eea, #764ba2); */
 }
 
 
@@ -130,6 +173,7 @@ h1, p {
 #home{
     margin: 0;
     padding: 0;
+    padding-top: 70px;
 }
 
 .hero {     
@@ -337,4 +381,95 @@ h1, p {
         padding: 15px;
         font-size: 15px;
     }
+}
+
+/* ================================================= */
+/* 📱 MOBILE RESPONSIVE SETTINGS */
+/* Is section ka kaam website ko mobile-friendly banana hai */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* 📌 Navbar mobile me */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    /* 📌 Hero section text */
+    .text {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    /* 📌 About section box */
+    .about-content {
+        width: 95%;
+        padding: 15px;
+        min-height: auto;
+    }
+
+    .about-content h1 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    /* 📌 Highlights cards */
+    .highlight-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlight-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    /* 📌 Places section cards */
+    .places-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* 📌 Contact section */
+    .contact-box {
+        width: 95%;
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    /* 📌 Success page */
+    .success-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .success-box h1 {
+        font-size: 28px;
+    }
+
+    .success-box p {
+        font-size: 16px;
+    }
+}
+
+/* ================================================= */
+/* 🖼️ ALL IMAGES RESPONSIVE */
+/* Kisi bhi image ko screen ke bahar jane se rokta hai */
+/* ================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
 }
